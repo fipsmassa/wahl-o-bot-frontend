@@ -11,3 +11,368 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* CUSTOM STYLES */
+/* Variables */
+:root {
+  --logo: url('assets/images/logo.png');
+  --yellow: #fdac53;
+  --grey: #fafafa;
+  --dark-grey: #f1f1f1;
+}
+
+/* presets */
+body {
+  background-color: var(--grey) !important;
+}
+
+.wahlobot a {
+  color: var(--yellow);
+}
+
+.wahlobot a:hover {
+  color: var(--yellow);
+}
+
+.main-box h2 {
+  margin-bottom: 0;
+}
+
+/**
+ * ==============================================
+ * Dot Flashing
+ * ==============================================
+ */
+.dot-flashing {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--yellow);
+  color: var(--yellow);
+  animation: dotFlashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+  display: inline-block;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-flashing::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--yellow);
+  color: var(--yellow);
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--yellow);
+  color: var(--yellow);
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: var(--yellow);
+  }
+  50%,
+  100% {
+    background-color: #ffe9d1;
+  }
+}
+
+/* Header */
+.logo {
+  background-image: var(--logo);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 175px;
+  width: 175px;
+}
+
+.team {
+  text-align: right;
+}
+
+/* main */
+.main-box {
+  border-radius: 10px;
+}
+
+.main-box h2 {
+  text-align: center;
+}
+
+/* Parteien */
+.parties,
+.chat {
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+    0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.parties {
+  padding: 20px;
+}
+
+.parties h2 {
+  padding-bottom: 20px;
+}
+
+.party-logo {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 100px;
+  border: 1px solid var(--yellow);
+  margin-right: 20px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.gruene .party-logo {
+  background-image: url('assets/images/Gruene-logo.jpg');
+}
+
+.cdu .party-logo {
+  background-image: url('assets/images/cdu-logo-neu.jpg');
+}
+
+.spd .party-logo {
+  background-image: url('assets/images/spd-logo-neu.png');
+}
+
+.fdp .party-logo {
+  background-image: url('assets/images/fdp-logo.png');
+}
+
+.linke .party-logo {
+  background-image: url('assets/images/DieLinke-logo.jpg');
+}
+
+.afd .party-logo {
+  background-image: url('assets/images/afd-logo.png');
+}
+
+.party {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 40px;
+}
+
+.party:last-of-type {
+  margin-bottom: 0;
+}
+
+.party.active {
+  background-color: var(--dark-grey);
+}
+
+.party span {
+  display: inline-block;
+  text-align: left;
+}
+
+/* chat */
+.bubble {
+  margin: 0.5rem 0;
+  width: fit-content;
+}
+
+.speechbubbles {
+  padding: 20px 75px;
+  height: 440px;
+  overflow-y: scroll;
+}
+
+.speechbubbles .single-bubble {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.speechbubbles .chat-robot {
+  position: absolute;
+  left: -55px;
+  bottom: -35px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50px;
+  background-image: url('assets/images/robot.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.speechbubbles .chat-robot.gruene {
+  background-image: url('assets/images/Gruene-logo.jpg');
+}
+
+.speechbubbles .chat-robot.cdu {
+  background-image: url('assets/images/cdu-logo-neu.jpg');
+}
+
+.speechbubbles .chat-robot.spd {
+  background-image: url('assets/images/spd-logo-neu.png');
+}
+
+.speechbubbles .chat-robot.fdp {
+  background-image: url('assets/images/fdp-logo.png');
+}
+
+.speechbubbles .chat-robot.linke {
+  background-image: url('assets/images/DieLinke-logo.jpg');
+}
+
+.speechbubbles .chat-robot.afd {
+  background-image: url('assets/images/afd-logo.png');
+}
+
+.speechbubbles .chat-person {
+  position: absolute;
+  right: -55px;
+  bottom: -35px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50px;
+  background-image: url('assets/images/emoji.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+.chat .input {
+  margin-top: 70px;
+  position: absolute;
+  width: 600px;
+  margin: auto;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+}
+
+.chat .input .loading-dots {
+  text-align: left;
+}
+
+.chat .input .writing {
+  margin-right: 30px;
+}
+
+.chat input {
+  border-radius: 50px;
+  border: none;
+}
+
+.chat .send {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  border: none;
+  background-color: var(--yellow);
+  top: -25px;
+  right: 30px;
+  background-image: url('assets/images/paper-plane.png');
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: 30% 52%;
+}
+
+.chat .send:hover {
+  cursor: pointer;
+}
+
+.chat {
+  background-color: var(--dark-grey);
+  height: 618px;
+  position: relative;
+}
+
+.chat-heading {
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 20px 0;
+}
+
+.chat p {
+  border-radius: 1.15rem;
+  line-height: 1.25;
+  max-width: 75%;
+  padding: 0.5rem 0.875rem;
+  position: relative;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.chat p::before,
+.chat p::after {
+  bottom: -0.1rem;
+  content: '';
+  height: 1rem;
+  position: absolute;
+}
+
+p.from-bot {
+  align-items: flex-start;
+  background-color: white;
+  color: #000;
+}
+
+p.from-bot:before {
+  border-bottom-right-radius: 0.8rem 0.7rem;
+  border-left: 1rem solid white;
+  left: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+p.from-bot:after {
+  background-color: var(--dark-grey);
+  border-bottom-right-radius: 0.5rem;
+  left: 20px;
+  transform: translate(-30px, -2px);
+  width: 10px;
+}
+
+p.from-user {
+  align-self: flex-end;
+  background-color: var(--yellow);
+  color: white;
+}
+
+p.from-user:before {
+  border-bottom-left-radius: 0.8rem 0.7rem;
+  border-right: 1rem solid var(--yellow);
+  right: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+p.from-user:after {
+  background-color: var(--dark-grey);
+  border-bottom-left-radius: 0.5rem;
+  right: -40px;
+  transform: translate(-30px, -2px);
+  width: 10px;
+}

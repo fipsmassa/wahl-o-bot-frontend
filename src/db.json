@@ -1,0 +1,34 @@
+{
+  "parties": [
+    {
+      "id": 1,
+      "party": "Grüne",
+      "response": "Mock API Antwort Grüne"
+    },
+    {
+      "id": 2,
+      "party": "CDU",
+      "response": "Mock API Antwort CDU"
+    },
+    {
+      "id": 3,
+      "party": "SPD",
+      "response": "Mock API Antwort SPD"
+    },
+    {
+      "id": 4,
+      "party": "FDP",
+      "response": "Mock API Antwort FDP"
+    },
+    {
+      "id": 5,
+      "party": "Linke",
+      "response": "Mock API Antwort Linke"
+    },
+    {
+      "id": 6,
+      "party": "AfD",
+      "response": "Mock API Antwort AfD"
+    }
+  ]
+}
