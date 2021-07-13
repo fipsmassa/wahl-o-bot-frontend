@@ -273,7 +273,9 @@ body {
 }
 
 .chat .input .loading-dots {
-  text-align: left;
+  position: absolute;
+  top: -30px;
+  left: 10px;
 }
 
 .chat .input .writing {
