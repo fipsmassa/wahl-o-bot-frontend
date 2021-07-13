@@ -196,6 +196,7 @@ const Chatwindow = ({ party }) => {
               content: result.result,
               id: chatGruene.length + 2,
             }
+            setLoading(false)
             setChatGruene((chat) => {
               return [...chat, chatObject]
             })
@@ -206,6 +207,7 @@ const Chatwindow = ({ party }) => {
               content: result.result,
               id: chatCdu.length + 2,
             }
+            setLoading(false)
             setChatCdu((chat) => {
               return [...chat, chatObject]
             })
@@ -216,6 +218,7 @@ const Chatwindow = ({ party }) => {
               content: result.result,
               id: chatSpd.length + 2,
             }
+            setLoading(false)
             setChatSpd((chat) => {
               return [...chat, chatObject]
             })
@@ -226,6 +229,7 @@ const Chatwindow = ({ party }) => {
               content: result.result,
               id: chatFdp.length + 2,
             }
+            setLoading(false)
             setChatFdp((chat) => {
               return [...chat, chatObject]
             })
@@ -236,6 +240,7 @@ const Chatwindow = ({ party }) => {
               content: result.result,
               id: chatLinke.length + 2,
             }
+            setLoading(false)
             setChatLinke((chat) => {
               return [...chat, chatObject]
             })
@@ -246,6 +251,7 @@ const Chatwindow = ({ party }) => {
               content: result.result,
               id: chatAfd.length + 2,
             }
+            setLoading(false)
             setChatAfd((chat) => {
               return [...chat, chatObject]
             })
@@ -254,9 +260,7 @@ const Chatwindow = ({ party }) => {
         .catch((error) => {
           console.log(error)
         })
-
-      setLoading(false)
-    }, 2000)
+    }, 1000)
   }
 
   return (
