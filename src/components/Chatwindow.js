@@ -113,7 +113,7 @@ const Chatwindow = ({ party }) => {
       setChatGruene((chat) => {
         return [...chat, chatObject]
       })
-      // url = 'http://localhost:3000/parties/1'
+      //url = 'http://localhost:3000/parties/1'
     }
     if (party === 'cdu') {
       chatObject = {
@@ -124,7 +124,7 @@ const Chatwindow = ({ party }) => {
       setChatCdu((chat) => {
         return [...chat, chatObject]
       })
-      // url = 'http://localhost:3000/parties/2'
+      //url = 'http://localhost:3000/parties/2'
     }
     if (party === 'spd') {
       chatObject = {
@@ -135,7 +135,7 @@ const Chatwindow = ({ party }) => {
       setChatSpd((chat) => {
         return [...chat, chatObject]
       })
-      //  url = 'http://localhost:3000/parties/3'
+      //url = 'http://localhost:3000/parties/3'
     }
     if (party === 'fdp') {
       chatObject = {
@@ -189,6 +189,7 @@ const Chatwindow = ({ party }) => {
       })
         .then((res) => res.json())
         .then((result) => {
+          console.log(result)
           let chatObject = {}
           if (party === 'gruene') {
             chatObject = {
